@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'FINDWAYS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'gis',
+        'NAME': 'ggkpostgis',
         'USER': 'gunarevuri',
         'HOST': 'localhost',
         'PORT': '5432'

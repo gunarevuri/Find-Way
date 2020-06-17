@@ -9,6 +9,8 @@ class BusStation(models.Model):
     location = models.PointField(srid=4326,null=True,blank=True)
     address = models.CharField(max_length=50)
     bus_station_id=models.CharField(max_length=10)
+    latitude = models.DecimalField(max_digits = 13, decimal_places = 10,null=True, blank=True)
+    longitude = models.DecimalField(max_digits = 13,decimal_places = 10, null = True,blank=True)
     objects=models.Manager()
 
 
@@ -18,6 +20,6 @@ class Timings(models.Model):
 	arrival_time=models.TimeField(default=timezone.now())      
 
 	def __str__(self):
-		return self.bus_station_id.name, self.arrival_time
+		return self.bus_station_id.name
 
 
