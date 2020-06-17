@@ -1,0 +1,46 @@
+{% extends 'buses/base.html' %}
+
+{% block content %}
+  <div class="navbar">
+     <div class="navbar__link-brand">Find Way</div>
+     <div class="navbar__link-toggle">
+         <i class="fas fa-bars"></i>
+</div>
+        <div class="navbar__items">
+           
+           <div class="navbar__link"><a href="">home</a></div>
+      
+           <div class="navbar__link"><a href="#"><span class="glyphicon glyphicon-user"></span>profile</a></div>
+           <div class="navbar__link"><a href="/userlogout/"><span class="glyphicon glyphicon-user"></span>logout</a></div>
+        </div>
+</div> 
+<form method="POST">
+	{% csrf_token %}
+	<div style="margin-bottom:5em;">
+
+{{form}}
+
+</div>
+<div style="display:grid;place-items:center;"><input type="submit" value="getbusstations">
+
+
+</form>
+<script>
+	window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('id_latitude').value = startPos.coords.latitude;
+    document.getElementById('id_longitude').value = startPos.coords.longitude;
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
+
+
+
+
+
+	</script>
+
+
+{% endblock %}

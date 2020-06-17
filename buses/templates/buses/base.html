@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head><title>Find Way</title>
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'buses/css/mohan.css' %}" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+body {
+  margin: 0;
+  background: #333;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  background-image:url({% static 'buses/download.jpeg' %});
+  background-blend-mode:multiply;
+  background-size:cover;
+}
+</style>
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+<!--     <div class="navbar">
+     <div class="navbar__link-brand">Find Way</div>
+     <div class="navbar__link-toggle">
+         <i class="fas fa-bars"></i>
+</div>
+        <div class="navbar__items">
+           
+           <div class="navbar__link"><a href="">home</a></div>
+      
+           <div class="navbar__link"><a href=""><span class="glyphicon glyphicon-user"></span>profile</a></div>
+           <div class="navbar__link"><a href=""><span class="glyphicon glyphicon-user"></span>logout</a></div>
+         
+           <div class="navbar__link"><a href="/signupuser/"><span class="glyphicon glyphicon-user"></span>register</a></div>
+           <div class="navbar__link"><a href="/loginuser/"><span class="glyphicon glyphicon-log-in"></span> login</a></div>
+          
+
+        </div>
+</div>  -->
+<div class="content" >
+    <div class="col-md-5">
+      {% block content %}{% endblock %}
+    </div>
+    
+    </div>
+    
+    
+
+
+
+
+
+
+
+</html>
+<script>
+function add_remove_toggle()
+{
+ const value=document.querySelectorAll('.navbar__items')
+ value.forEach(a => 
+  a.classList.toggle('navbar__toggleshow'));
+}
+document.querySelector('.navbar__link-toggle').addEventListener('click',add_remove_toggle);
+</script>
