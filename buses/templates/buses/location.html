@@ -1,4 +1,5 @@
 {% extends 'buses/base.html' %}
+{% load static %}
 
 {% block content %}
   <div class="navbar">
@@ -15,8 +16,6 @@
         </div>
 </div> 
 
-<legend></legend>
-
 {% for obj in form %}
 <div class="content-section">
 	<ul>
@@ -27,18 +26,10 @@
 <li><p>ADDRESS:{{obj.address}}</p></li>
 
 <li><p>DISTANCE:{{obj.distance}}</p></li>
-
-
-
-
 </ul>
 
 
 </div>
-<legend></legend>
-
-
-
 
 
 {% endfor %}

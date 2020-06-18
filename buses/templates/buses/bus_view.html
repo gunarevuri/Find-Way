@@ -1,11 +1,12 @@
 {% extends 'buses/base.html' %}
 
 {% block content %}
+
   <div class="navbar">
      <div class="navbar__link-brand">Find Way</div>
      <div class="navbar__link-toggle">
          <i class="fas fa-bars"></i>
-</div>
+    </div>
         <div class="navbar__items">
            
            <div class="navbar__link"><a href="">home</a></div>
@@ -14,10 +15,9 @@
            <div class="navbar__link"><a href="/userlogout/"><span class="glyphicon glyphicon-user"></span>logout</a></div>
         </div>
 </div> 
-<legend></legend>
 
 {% for obj in form %}
-<div class="content-section">
+<div class="content-section" style="background-color: black;">
 	<ul>
 
 <li><p>NAME:{{obj.bus_station_id.name}}</p></li>

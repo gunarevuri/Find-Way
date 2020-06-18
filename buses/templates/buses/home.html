@@ -10,16 +10,14 @@
            
            <div class="navbar__link"><a href="">home</a></div>
       
-           <div class="navbar__link"><a href="#"><span class="glyphicon glyphicon-user"></span>profile</a></div>
-           <div class="navbar__link"><a href="/userlogout/"><span class="glyphicon glyphicon-user"></span>logout</a></div>
+           <div class="navbar__link"><a href="#">profile</a></div>
+           <div class="navbar__link"><a href="/userlogout/">Logout</a></div>
         </div>
 </div> 
 <form method="POST">
 	{% csrf_token %}
-	<div style="margin-bottom:5em;">
-<ul>
+	<div style="margin-bottom:5em; color: black;">
 {{form}}
-</ul>
 
 </div>
 <div style="display:grid;place-items:center;"><input type="submit" value="getbusstations">
@@ -37,11 +35,7 @@
   navigator.geolocation.getCurrentPosition(geoSuccess);
 };
 
-
-
-
-
-	</script>
+</script>
 
 
 {% endblock %}

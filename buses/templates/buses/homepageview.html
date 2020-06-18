@@ -14,9 +14,9 @@
 		<h2 style="text-align: center; margin-top: 20px; color: white;">Sign UP!</h2>
 		<form action="{% url 'signupuser' %}" method="post">
 			{% csrf_token %}
-			<h3>Username:</h3>
+			<h3 style="color: black;">Username:</h3>
 			<input style="margin-top: 10px;" type="text" class="form-control" name="username" placeholder="username"><br>
-			<h3>Password:</h3>
+			<h3 style="color: black;">Password:</h3>
 			<input style="margin-top: 10px;" class="form-control" type="password" name="password" placeholder="password"><br>
 		<!-- 	Phone No:<input style="margin-top: 10px;" class="form-control" type="number" name="phoneno" placeholder="phone number"><br> -->
 			<input style="margin-top: 10px; display: block;margin: auto;" type="submit" name="" value="Sign Up" class="btn btn-success">

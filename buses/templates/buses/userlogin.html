@@ -1,15 +1,17 @@
 {% extends 'buses/base.html' %}
 {% block content %}
-<h2 style="text-align: center;color: white;">Login</h2>
+<h2 style="text-align: center;color: orange;margin-left:0px;
+    margin-top: 150px; ">Login</h2>
 
-<div class="container" style="width: 400px;">
+<div style="width: 400px;    margin-left: 100px;
+    margin-top: 10px; ">
 <form action="/userauthenticate/" method="post">
 	{% csrf_token %}
-	<h3 style="color: white"> Username</h3>
-	<input class = " form-control"  type="text" name="username" placeholder="username">
-	<h3 style="color: white">password:</h3>
+	<h3 style="color: orange;"> Username</h3>
+	<input class = " form-control" type="text" name="username" placeholder="username">
+	<h3 style="color: orange;">password:</h3>
 	<input class="form-control" type="password" name="password" placeholder="password">
-	<input type="submit" value="Login" name="Login" class="btn btn-success">
+	<input type="submit" value="Login" style="margin-left: 170px; margin-top: 30px;" name="Login" class="btn btn-success">
 </form>
 </div>
 
