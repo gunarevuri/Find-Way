@@ -15,19 +15,18 @@
            <div class="navbar__link"><a href="{% url 'userlogout' %}"><span class="glyphicon glyphicon-user"></span>logout</a></div>
         </div>
 </div> 
-
+<h3 style="color: orange;">Sorted Based on distance from present location</h3>
 {% for obj in form %}
-<div class="content-section">
+<div class="content-section" style="font-size: 15px;">
 	<ul>
-
-
+<h3>{{ obj.id }}</h3>
 <li><p>BUS_ID:<a href="/bus/{{obj.id}}/"> {{obj.name}}</a></p></li>
 
 <li><p>ADDRESS:{{obj.address}}</p></li>
 
 <li><p>DISTANCE:{{obj.distance}}</p></li>
 </ul>
-
+----------------------------------------------------------
 
 </div>
 

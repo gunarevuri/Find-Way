@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
 def displaybuses(request,id):
+
 	if not request.user.is_authenticated:
 		return redirect(userloginview)
 	queryset=Timings.objects.filter(bus_station_id=id)
@@ -18,6 +19,7 @@ def displaybuses(request,id):
 
 
 def findLocation(request):
+       
 	if not request.user.is_authenticated:
 		return redirect(userloginview)
 	form=FindLocationForm()
