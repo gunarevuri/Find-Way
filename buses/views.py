@@ -74,7 +74,7 @@ def userauthenticate(request):
 	if user is None:
 		messages.add_message(request, messages.ERROR, "username or password is not correct")
 		return redirect(userloginview)
-
+# user login view
 def userlogout(request):
 	if not request.user.is_authenticated:
 		return redirect(userloginview)
